@@ -40,7 +40,7 @@ export class AuthService {
         throw new NotFoundException('User with that name already exists');
       }
       let code = Math.floor(100000 + Math.random() * 900000);      ;
-      await this.userModal.create(AuthCredentialsDto);
+     const user =  await this.userModal.create(AuthCredentialsDto);
       const mail = {
         to: AuthCredentialsDto.email,
         subject: 'Emial Verification Pin',
@@ -54,7 +54,7 @@ export class AuthService {
       });
       await this.emailService.sendEmail(mail);
       return {
-        
+        user: user,
         statud: true,
         message:
           'Verification code is send to your email please verify your email address',
