@@ -18,6 +18,11 @@ export class AuthController {
     return this.authService.interNEwUser(AuthCredentialsDto);
   }
 
+  @Post('register-user')
+  async registerusers(@Body() AuthCredentialsDto: AuthCredentialsDto) {
+    return this.authService.registerusers(AuthCredentialsDto);
+  }
+
   @Post('/verify-pin')
   verifyPin(@Body() verifyPinParams: VerifyPinDto) {
     return this.authService.verifyPasswordResetPin(verifyPinParams);
