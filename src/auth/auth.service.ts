@@ -44,7 +44,7 @@ export class AuthService {
       const mail = {
         to: AuthCredentialsDto.email,
         subject: 'Emial Verification Pin',
-        from: "adadmaan@gmail.com",
+        from: "decentral@yopmail.com",
         text: `Your Email verification code is ${code}. Please do not share this with anyone.`,
       };
       

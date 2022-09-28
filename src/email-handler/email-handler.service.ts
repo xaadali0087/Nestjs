@@ -5,7 +5,7 @@ import * as SendGrid from '@sendgrid/mail';
 @Injectable()
 export class EmailHandlerService {
   constructor(private readonly configService: ConfigService) {
-    SendGrid.setApiKey("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");
+    SendGrid.setApiKey("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");
   }
 
   async sendEmail(mail: SendGrid.MailDataRequired) {
